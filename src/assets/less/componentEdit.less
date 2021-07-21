@@ -1,0 +1,307 @@
+@import './colorSet.less';
+
+.icon {
+    color: @text-3;
+    width: 14px;
+    height: 14px;
+}
+
+// 下拉框样式
+.ant-select-dropdown {
+    background: @background-1;
+    color: @text-2;
+}
+
+.ant-select-dropdown-menu-item-selected {
+    background: @background-1  !important;
+    color: @text-2;
+}
+
+.ant-select-dropdown-menu-item {
+    background: @background-1  !important;
+    color: @text-2;
+}
+
+.ant-select-dropdown-menu-item:hover {
+    background: @background-5  !important;
+}
+
+
+
+.ant-divider {
+    background: @background-8
+}
+
+.ant-input[disabled] {
+    background-color: transparent
+}
+
+/** webkit滚动条样式 **/
+::-webkit-scrollbar {
+    width: 0px;
+    height: 4px;
+}
+
+// 右键鼠标
+.right-menu {
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    position: fixed;
+    background: @background-5;
+    border-radius: 4px;
+    z-index: 999;
+    display: none;
+    font-size: 12px;
+
+    a {
+        padding: 8px;
+        text-align: center;
+        display: block;
+        color: @text-2;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    a:hover {
+        background: @border-gray-color;
+    }
+}
+
+
+
+.ant-select-selection__clear {
+    background: transparent;
+}
+
+.ant-table-thead>tr>th {
+    background: transparent !important;
+    border-bottom: 0;
+    color: @text-3  !important;
+}
+
+.ant-table {
+    color: @text-3;
+}
+
+.ant-table-tbody>tr>td {
+    border-bottom: 0;
+    background: transparent !important;
+    font-size: 12px;
+}
+
+.ant-table-thead>tr>th,
+.ant-table-tbody>tr>td {
+    padding: 8px 0 !important
+}
+
+
+// 气泡框
+.ant-popover {
+    .ant-popover-inner {
+        background-color: @primary-color;
+    }
+
+    .ant-popover-arrow {
+        border-color: @primary-color  !important
+    }
+
+    .ant-popover-inner-content {
+        color: @text-3;
+        font-size: 12px;
+        padding: 8px 6px;
+        ;
+    }
+}
+
+.ant-form-item-label {
+    text-align: left !important;
+}
+
+.ant-form label {
+    color: @text-5;
+}
+
+.ant-tabs-bottom .ant-tabs-bottom-bar {
+    margin: 0;
+    border: 0;
+}
+
+.ant-collapse,
+.ant-collapse-content {
+    background-color: transparent;
+    color: @text-2;
+}
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header {
+    color: @text-2;
+}
+
+.ant-divider-horizontal {
+    margin: 8px 0;
+}
+
+.ant-collapse-borderless>.ant-collapse-item {
+    border: 0
+}
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-extra {
+    line-height: 32px;
+}
+
+.ant-btn-background-ghost {
+    color: @primary-color;
+    border-color: @primary-color;
+}
+
+
+
+.ant-tabs-bar.ant-tabs-right-bar {
+    background: @background-10;
+    height: 100vh;
+}
+
+.ant-tabs .ant-tabs-right-bar {
+    float: left;
+}
+
+.ant-tabs .ant-tabs-left-bar .ant-tabs-tab,
+.ant-tabs .ant-tabs-right-bar .ant-tabs-tab {
+    padding: 8px 16px;
+}
+
+.ant-tabs-ink-bar {
+    background-color: @primary-color;
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+    color: @text-7  !important;
+    background: @background-17  !important;
+}
+
+.ant-tabs-nav-wrap {
+    background: @background-17  !important;
+}
+
+.ant-tabs-nav .ant-tabs-tab-active {
+    color: @primary-color  !important;
+    background: @background-10  !important;
+}
+
+.ant-tabs-tab {
+    width: 48px;
+    padding: 8px 0 8px 16px;
+}
+
+.ant-tabs .ant-tabs-right-bar .ant-tabs-ink-bar {
+    left: 2px;
+}
+
+.ant-tabs .ant-tabs-right-content {
+    border-right: 0;
+    padding: 0;
+}
+
+// .ant-col {
+//     line-height: 45px;
+// }
+
+.ant-form-item-control {
+    line-height: 26px;
+}
+
+.ant-form-item-label {
+    line-height: 26px;
+}
+
+.ant-form-item-label>label {
+    color: @text-2;
+    font-size: 12px;
+}
+
+.ant-input-group-compact {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.ant-input,
+.ant-select-selection.ant-select-selection--single,
+.ant-input-affix-wrapper .ant-input,
+.ant-input-number,
+.ant-input-group-compact input {
+    background: @background-9;
+    color: @text-1;
+    outline: none;
+    height: 26px;
+    border: 0;
+    font-size: 12px;
+}
+
+.ant-upload.ant-upload-select-picture-card {
+    background: @background-9;
+    color: @text-1;
+    outline: none;
+    border: 0;
+    font-size: 12px;
+
+    .ant-upload-text {
+        color: @text-2;
+    }
+}
+
+.ant-input-affix-wrapper .ant-input-suffix,
+.ant-input-affix-wrapper .ant-input-prefix {
+    color: @background-7;
+}
+
+.ant-switch {
+    min-width: 26px;
+    height: 14px;
+}
+
+.ant-switch-loading-icon,
+.ant-switch::after {
+    width: 10px;
+    height: 10px;
+}
+
+.ant-input-number-handler-wrap {
+    border: 0;
+}
+
+
+.ant-input-number-handler-down {
+    border-color: @background-9;
+    border-top: 0;
+}
+
+.ant-input-number-handler {
+    background: @background-12;
+}
+
+.ant-select-selection__rendered {
+    line-height: 26px;
+}
+
+.ant-radio-button-wrapper {
+    height: 26px;
+    line-height: 26px;
+}
+
+// .ant-drawer-body {
+//     padding: 0;
+// }
+
+.ant-upload.ant-upload-select-picture-card>.ant-upload {
+    padding: 16px 8px;
+}
+
+// 上传
+.ant-upload-list-picture-card .anticon-picture+.ant-upload-list-item-name{
+    font-size: 12px;
+    color: @text-1;
+}

@@ -1,0 +1,733 @@
+@import './colorSet.less';
+@import './componentEdit.less';
+
+.move {
+    cursor: move;
+}
+
+.fx_EditCon {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: @background-10;
+
+    // 头
+    .fx_controlManagement {
+        height: 38px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background: @background-10;
+
+        .fx_headCenter {
+            flex: 1;
+            display: flex;
+        }
+
+        .fx_headerName {
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+            color: @text-2;
+            width: 100%;
+            cursor: default;
+            line-height: 22px;
+        }
+
+        .fx_flexEnd {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .fx_boxItem {
+            display: flex;
+            align-items: center;
+            z-index: 100;
+
+            .fx_bg {
+                background: @background-9;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                width: 38px;
+                height: 22px;
+            }
+
+            .fx_bg:hover {
+                background: @primary-color;
+            }
+
+            .fx_check {
+                background: @primary-color;
+            }
+        }
+    }
+
+    .fx_main {
+        height: calc(100% - 38px);
+        display: flex;
+
+        .fx_layerArea {
+
+            .fx_checkIcon {
+                color: @primary-color;
+            }
+
+            .fx_uncheckIcon {
+                color: @text-4;
+            }
+
+            .fx_layerLeft,
+            .fx_layerRight {
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                position: relative;
+                display: flex;
+                background: @background-11;
+
+                .fx_title {
+                    color: @text-2;
+                    height: 32px;
+                    line-height: 32px;
+                    background: @background-5;
+                    padding: 0 8px;
+                    display: flex;
+                    align-content: center;
+                }
+
+                .fx_box {
+                    height: 88px;
+                    display: flex;
+
+                    .fx_grid {
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        // padding: 8px;
+
+                        img {
+                            width: 56px;
+                            height: 56px;
+                        }
+                    }
+                }
+
+                .fx_tabs {
+                    height: calc(100% - 216px);
+                    background: @background-6;
+                    overflow: hidden;
+
+                    .fx_tabSpan {
+                        width: 100%;
+                        display: inline-block;
+                        white-space: pre-wrap;
+                    }
+
+                    .fx_headerTitle {
+                        height: 40px;
+                        line-height: 40px;
+                        display: flex;
+                        align-items: center;
+                        color: @text-4;
+                        background: @background-11;
+                        padding-left: 8px;
+                    }
+                }
+
+                .fx_lists {
+                    overflow: auto;
+                    background: @background-13;
+                    height: calc(100vh - 260px);
+                }
+
+                .fx_listInfo {
+                    background: @background-13;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 8px 8px;
+                    margin: 0;
+
+                    .fx_listBoxSingle {
+                        width: 90px;
+                        overflow: hidden;
+                        vertical-align: top;
+                        user-select: none;
+                        flex: none;
+                        cursor: pointer;
+                        display: inline-block;
+                        margin-bottom: 8px;
+
+                        .fx_listTitle {
+                            padding: 0;
+                            color: @text-4;
+                            line-height: 24px;
+                            height: 24px;
+                            font-size: 12px;
+                            text-align: center;
+                            font-weight: 400;
+                            background: @background-9;
+                        }
+
+                        .fx_listImg {
+                            background-color: @background-11;
+                            width: 100%;
+                            height: 55px;
+                            overflow: hidden;
+                            background-clip: content-box;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            position: relative;
+                            text-align: center;
+                            box-sizing: content-box;
+                        }
+                    }
+                }
+
+                .fx_search {
+                    height: 30px;
+                    width: calc(100% - 2px);
+                    background: @background-9;
+                    z-index: 100;
+
+                    .ant-input-clear-icon {
+                        color: @text-5;
+                    }
+                }
+            }
+
+            .fx_layerLeft {
+                .fx_listGroup {
+                    color: @text-2;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 12px;
+
+                    .fx_listGroupItem {
+                        height: 35px;
+                        padding-left: 16px;
+                        line-height: 35px;
+                        align-items: center;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    .fx_icon {
+                        color: @text-2;
+                    }
+                }
+
+                .fx_listGroupItem:hover {
+                    background: @background-7;
+                }
+
+                .fx_active {
+                    background: @primary-color  !important;
+                }
+
+                .fx_iconFont {
+                    background: @background-5;
+                    border: 1px solid @border-color-3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    width: 38px;
+                    height: 22px;
+                    margin-right: 8px;
+                }
+
+                .fx_iconFont:hover {
+                    background: @primary-color;
+                }
+
+            }
+        }
+
+        .fx_canvas {
+            flex: 1;
+            overflow: hidden;
+            background: @background-15;
+            position: relative;
+
+            .fx_canvasBox {
+                width: 100%;
+                height: calc(100% - 40px);
+                margin: 0;
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                .fx_wrapper {
+                    width: 1920px;
+                    height: 1080px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    .fx_screens {
+                        width: 100%;
+                        height: 100%;
+                        overflow: auto;
+                        position: relative;
+                    }
+                }
+            }
+
+            .fx_assembly {
+
+                .fx_assemblyGroupBox {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .fx_mode {
+                    background: @background-5;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+
+                    .fx_modeFlex {
+                        flex: 1;
+                        border: 1px dashed @input-arrow-color;
+                        display: flex;
+                        flex-direction: column;
+
+                        .fx_modeTop {
+                            height: 50px;
+                            float: right;
+                            font-size: 24px;
+                            display: flex;
+                            justify-content: flex-end;
+                            margin-right: 16px;
+                            cursor: pointer;
+                        }
+
+                        .fx_modeCon {
+                            display: flex;
+                            flex: 1;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 40px;
+                        }
+                    }
+
+                    .fx_active {
+                        border: 2px solid @primary-color;
+                    }
+                }
+            }
+
+            .fx_info {
+                position: absolute;
+                bottom: -22px;
+                right: 0;
+                color: @background-7;
+            }
+
+        }
+
+        .fx_sliderBtn {
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            background: @background-18;
+            bottom: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: @text-2;
+            padding-right: 16px;
+        }
+
+        .fx_tools {
+            height: 32px;
+            display: flex;
+            align-items: center;
+
+            .fx_tool {
+                height: 30px;
+                color: @text-2;
+                background: @background-3;
+                border: 1px solid @border-color-3;
+                padding: 0 12px;
+                display: flex;
+                font-size: 12px;
+                align-items: center;
+                cursor: pointer;
+
+            }
+        }
+
+        .fx_control {
+            height: 100%;
+            font-size: 12px;
+            background: @background-10;
+
+            .fx_controlTitle {
+                color: @text-2;
+                height: 32px;
+                line-height: 32px;
+                background: @background-5;
+                padding: 0 8px;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+            }
+
+            .fx_widthInputGroup {
+                width: calc(50% - 8px);
+            }
+
+            .fx_tabIcon {
+                height: 30px;
+                width: 28px;
+                display: inline-flex;
+                background: @background-5;
+                justify-content: center;
+                align-items: center;
+                margin-right: 8px;
+                cursor: pointer;
+            }
+
+            .fx_formColor {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 32px;
+                width: 40px;
+                border: 0;
+                background: transparent;
+            }
+
+            .ant-input-number-handler-wrap {
+                background: @background-1;
+            }
+
+            .fx_font {
+                position: relative;
+                // top: -10px;
+                color: @text-6;
+            }
+
+            .fx_fonts {
+                position: absolute;
+                bottom: -6px;
+                color: @text-6;
+            }
+        }
+    }
+}
+
+.fx_echarts {
+    height: 100%;
+    // background: #1D2126;
+
+    .fx_tabs {
+
+        .ant-tabs-nav .ant-tabs-tab-active,
+        .ant-tabs-nav .ant-tabs-tab {
+            width: 115px;
+            text-align: center;
+            height: 32px;
+            padding-top: 6px;
+        }
+    }
+
+    .fx_subTabs {
+        .ant-tabs-nav .ant-tabs-tab {
+            width: 86px;
+            text-align: center;
+            height: 32px;
+            padding-top: 6px;
+        }
+    }
+
+    // .ant-tabs-nav-wrap, .ant-tabs-nav .ant-tabs-tab {
+    //     background: @background-16;
+    // }
+
+    // .ant-tabs-nav .ant-tabs-tab-active {
+    //     background: @background-14;
+    // }
+
+    .fx_flexForm {
+        display: flex;
+        width: 100%;
+
+        .fx_lock {
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .ant-form-item {
+        margin-bottom: 0;
+    }
+
+    .fx_collapse {
+        overflow-x: hidden;
+        overflow-y: auto;
+        // min-height: 600px;
+        height: calc(100vh - 320px);
+        color: @text-3;
+    }
+
+    .ant-radio-button-wrapper {
+        width: 120px;
+        background: @background-4;
+        border: 0;
+        color: @text-2;
+        text-align: center;
+    }
+
+    .ant-radio-button-wrapper:not(:first-child)::before {
+        background: @background-4;
+    }
+
+    .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+        background: @background-8;
+        border: 0;
+        box-shadow: none
+    }
+
+    .ant-switch {
+        background-color: @background-5;
+    }
+
+    .ant-switch-checked {
+        background-color: @primary-color
+    }
+
+    .fx_spacing {
+        height: 100px;
+        width: 100%;
+        border: 1px dashed @border-color-4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: @text-3;
+        position: relative;
+        margin: 8px 0;
+
+        .fx_spacingBox {
+            width: 120px;
+            height: 40px;
+            background: @text-3;
+        }
+
+        .fx_left {
+            position: absolute;
+            left: 20px;
+            line-height: 100px;
+        }
+
+        .fx_right {
+            position: absolute;
+            right: 20px;
+            line-height: 100px;
+        }
+
+        .fx_top {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: -5px;
+        }
+
+        .fx_bottom {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: -5px;
+        }
+
+        .fx_inputSpanLeft {
+            width: 60px;
+            left: -20px;
+        }
+
+        .fx_inputSpanRight {
+            width: 60px;
+            right: -20px;
+        }
+
+        .fx_inputSpan {
+            width: 60px;
+            height: 25px;
+        }
+    }
+
+}
+
+.fx_other {
+    height: calc(100% - 32px);
+    overflow: hidden;
+
+    .fx_otherMain {
+        height: calc(100vh - 300px);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .fx_otherTab {
+        height: 650px;
+    }
+
+    .fx_tabs {
+
+        .ant-tabs-nav .ant-tabs-tab-active,
+        .ant-tabs-nav .ant-tabs-tab {
+            width: 115px;
+            text-align: center;
+            height: 32px;
+            padding-top: 6px;
+        }
+    }
+}
+
+.fx_control {
+
+    .fx_title {
+        position: relative;
+
+        h3 {
+            color: @text-3;
+        }
+
+        h4 {
+            color: @text-6;
+        }
+
+        .fx_themeStyle {
+            color: @primary-color;
+            font-weight: bold;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            cursor: pointer;
+
+            .icon {
+                color: @primary-color;
+            }
+        }
+    }
+
+    .fx_fontColor {
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    .fx_checkedIcons {
+        background: @primary-color  !important;
+    }
+
+    .fx_sourceData {
+        height: calc(100vh - 160px);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .fx_match {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .ant-timeline-item {
+            padding-bottom: 10px;
+        }
+        
+        .ant-timeline-item-content .ant-btn {
+            height: 25px;
+            padding: 0 8px;
+        }
+    }
+}
+
+.fx-divider {
+    margin: 8px 0;
+}
+
+.fx_codeLine {
+    background: @background-4;
+    padding: 16px;
+    height: 200px;
+    overflow: auto;
+}
+
+.fx_drawer {
+    .ant-drawer-header {
+        background: @background-6;
+        border-bottom-color: @background-4;
+
+        .ant-drawer-title {
+            color: @text-3;
+        }
+    }
+
+    .ant-drawer-content {
+        background: @background-6;
+        color: @text-3;
+    }
+
+    .ant-form label {
+        color: @text-5;
+    }
+
+    .ant-tabs-nav .ant-tabs-tab {
+        color: @text-2;
+    }
+
+    .ant-collapse,
+    .ant-collapse-content {
+        background-color: transparent;
+        color: @text-2;
+    }
+}
+
+
+.fx_editor {
+    background: #2d2d2d;
+    color: #ccc;
+    font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 5px;
+    height: 300px;
+    overflow: auto;
+}
+
+.prism-editor__textarea:focus {
+    outline: none;
+}
+
+.fx_iconFontDiv {
+    height: 35px;
+    line-height: 35px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 16px;
+    cursor: pointer;
+}
+
+.fx_iconFontDiv:hover {
+    background: @background-7;
+}
+
+.fx_iconFontDiv[disabled] {
+    cursor: not-allowed;
+    opacity: .4;
+}

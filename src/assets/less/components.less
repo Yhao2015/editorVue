@@ -1,0 +1,128 @@
+@import '~ant-design-vue/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+
+// @import './theme.less'; // 用于覆盖上面定义的变量
+//解决分页分离样式问题
+.ant-pagination-options {
+    position: relative;
+}
+
+
+//下面的样式可按需调整修改
+.ant-layout-header {
+    background: #fff;
+    z-index: 2;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    padding: 0px 20px;
+    border-bottom: 2px solid rgb(240, 242, 245);
+
+    .trigger {
+        font-size: 20px;
+    }
+}
+
+.ant-layout.ant-layout-has-sider {
+    height: 100vh;
+}
+
+.ant-layout-sider {
+    z-index: 3;
+    background: linear-gradient(180deg, #242834, #1b2b76);
+}
+
+.ant-menu {
+    background: transparent;
+    color: rgba(255, 255, 255, .6) !important;
+}
+
+.ant-menu-inline {
+    padding: 0 24px;
+}
+
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+    background: transparent;
+    box-shadow: none;
+}
+
+.ant-menu-submenu {
+    margin-top: 10px;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected,
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-active {
+    color: #004DFF;
+    background: transparent;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected::before,
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-active::before {
+    background: #004DFF;
+}
+
+.ant-menu-vertical .fx_specialItem {
+    padding: 0px !important;
+    text-align: center;
+}
+
+.fx_specialItem {
+    padding: 0px !important;
+
+    .fx_specialMenuItem {
+        padding: 0 24px;
+    }
+}
+
+.fx_specialItem:hover {
+    .fx_specialMenuItem {
+        background: linear-gradient(90deg, #009dff, #2d77ff) !important;
+        border-radius: 30px;
+        border: none !important;
+        color: #fff !important;
+    }
+}
+
+.ant-menu-submenu-selected .ant-menu-submenu-title,
+.fx_specialItem.ant-menu-item-selected {
+    background: linear-gradient(90deg, #009dff, #2d77ff) !important;
+    border-radius: 30px;
+    border: none !important;
+    margin: 0 auto;
+    color: #fff !important;
+}
+
+.ant-menu-submenu-inline:hover,
+.fx_specialItem:hover {
+    .ant-menu-submenu-title {
+        background: linear-gradient(90deg, #009dff, #2d77ff) !important;
+        border-radius: 30px;
+        border: none !important;
+        margin: 0 auto;
+        color: #fff !important;
+    }
+}
+
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+    border: none;
+}
+
+.ant-tree.ant-tree-block-node li .ant-tree-node-content-wrapper {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ant-menu-item .anticon,
+.ant-menu-submenu-title .anticon {
+    margin: 0px;
+    font-size: 20px;
+    vertical-align: text-bottom;
+}
+
+.ant-menu-inline .ant-menu-submenu-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
